@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import BunnyGif from "../assets/BunnyCute.gif";
-import img2 from "../assets/thinking.png";
 
 function Imgboy() {
   const [showNextText, setShowNextText] = useState(false);
@@ -23,42 +22,38 @@ function Imgboy() {
   }, [isTyping]);
 
   return (
-    <div className="imgboy-container flex items-end justify-center w-full h-full">
-      <div className="flex flex-col items-center justify-end">
+    <div className="imgboy-container flex items-center justify-center w-full h-full">
+      <div className="flex flex-col items-center justify-center gap-4">
 
-        {/* Bubble Chat */}
-        <div className="relative flex items-center justify-center mb-4">
-          <img src={img2} className="bubble-chat w-40 md:w-48" alt="Thinking Bubble" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center pt-4">
-            {!showNextText && (
-              <>
-                <p className={`anna-text ${isTyping ? "typing-effect" : ""}`}>
-                  Hi, Jaja!
-                </p>
-                {!isTyping && (
-                  <button onClick={handleNextClick} className="next-button">
-                    Next
-                  </button>
-                )}
-              </>
-            )}
-            {showNextText && (
-              <>
-                <p className={`anna-text ${isTyping ? "typing-effect" : ""}`}>
-                  Look at this.
-                </p>
-                {!isTyping && (
-                  <Link to="/flower" className="next-button">
-                    Next
-                  </Link>
-                )}
-              </>
-            )}
-          </div>
-        </div>
+        {/* Title */}
+        {!showNextText ? (
+          <>
+            <h1 className="anna-text text-5xl">Hi, Jaja! 🤍</h1>
+            <p className="sub-text">You make my world brighter 🤍</p>
+          </>
+        ) : (
+          <>
+            <h1 className="anna-text text-5xl">Look at this. 🤍</h1>
+          </>
+        )}
 
         {/* Bunny GIF */}
-        <img src={BunnyGif} className="w-48 md:w-60" alt="Bunny" />
+        <img src={BunnyGif} className="w-48 md:w-60 my-4" alt="Bunny" />
+
+        {/* Button */}
+        {!isTyping && (
+          <>
+            {!showNextText ? (
+              <button onClick={handleNextClick} className="next-pill-button">
+                Next <span>→</span>
+              </button>
+            ) : (
+              <Link to="/flower" className="next-pill-button">
+                Next <span>→</span>
+              </Link>
+            )}
+          </>
+        )}
 
       </div>
     </div>

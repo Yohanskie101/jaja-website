@@ -29,6 +29,34 @@
   background: rgba(0, 0, 0, 0.2); /* adjust the last value for more/less transparency */
 }
 
+.sub-text {
+  font-family: "Great Vibes", cursive;
+  font-size: 18px;
+  color: #b07070;
+  text-align: center;
+}
+
+.next-pill-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
+  padding: 16px 28px;
+  background-color: #f4a7b9;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Great Vibes", cursive;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.next-pill-button:hover {
+  background-color: #e88fa3;
+}
+
 /* Ensure the container takes the full viewport height and width */
 .homepage-container {
   position: relative;
