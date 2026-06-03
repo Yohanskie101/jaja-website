@@ -44,9 +44,9 @@ function FlowerPage() {
               ✕
             </button>
           </form>
-          <h3>To Anna Lisay Yau:</h3>
+          <h3>To Jaja:</h3>
           <p className="py-4">
-            Hello, Anna. I hope you find this website I created cute. Whenever
+            Hello, Jaja. I hope you find this website I created cute. Whenever
             you feel stressed, mentally exhausted, or even if you just miss me
             (hehe, assuming), please take a moment to check it. It’s my little
             way of bringing a smile to your face and reminding you that you’re
