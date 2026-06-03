@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link
-import img1 from "../assets/img-boy.png";
+import { Link } from "react-router-dom";
+import BunnyGif from "../assets/BunnyCute.gif";
 import img2 from "../assets/thinking.png";
 
 function Imgboy() {
   const [showNextText, setShowNextText] = useState(false);
-  const [isTyping, setIsTyping] = useState(true); // State to control typing animation
+  const [isTyping, setIsTyping] = useState(true);
 
   const handleNextClick = () => {
     setShowNextText(true);
-    setIsTyping(true); // Restart typing effect for the next text
+    setIsTyping(true);
   };
 
   useEffect(() => {
     if (isTyping) {
-      // Simulate typing effect duration
       const typingTimeout = setTimeout(() => {
         setIsTyping(false);
-      }, 2000); // Adjust duration based on text length
+      }, 2000);
 
       return () => clearTimeout(typingTimeout);
     }
@@ -26,7 +25,7 @@ function Imgboy() {
   return (
     <div className="imgboy-container">
       <div className="imgboy absolute bottom-12 left-0">
-        <img src={img1} className="w-60" alt="Boy" />
+        <img src={BunnyGif} className="w-60" alt="Bunny" />
       </div>
 
       {/* Bubble Chat Container */}
