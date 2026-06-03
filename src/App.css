@@ -96,10 +96,11 @@
   color: black;
 }
 .anna-text {
-  font-family: "Great Vibes", cursive; /* Romantic script font */
-  font-size: 28px; /* Large and elegant */
-  text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.6); /* Soft pink glow */
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
   color: black;
+  text-align: center;
 }
 
 .bubble-chat {

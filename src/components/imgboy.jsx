@@ -28,12 +28,12 @@ function Imgboy() {
         {/* Title */}
         {!showNextText ? (
           <>
-            <h1 className="anna-text text-5xl">Hi, Jaja! 🤍</h1>
-            <p className="sub-text">You make my world brighter 🤍</p>
+            <h1 className="anna-text text-5xl">Hi, Jaja!</h1>
+            <p className="sub-text">You make my world brighter </p>
           </>
         ) : (
           <>
-            <h1 className="anna-text text-5xl">Look at this. 🤍</h1>
+            <h1 className="anna-text text-5xl">Look at this</h1>
           </>
         )}
 
