@@ -23,42 +23,43 @@ function Imgboy() {
   }, [isTyping]);
 
   return (
-    <div className="imgboy-container">
-      <div className="imgboy absolute bottom-12 left-0">
-        <img src={BunnyGif} className="w-60" alt="Bunny" />
-      </div>
+    <div className="imgboy-container flex items-end justify-center w-full h-full">
+      <div className="flex flex-col items-center justify-end">
 
-      {/* Bubble Chat Container */}
-      <div className="absolute left-36 bottom-80">
-        <img src={img2} className="bubble-chat w-48" alt="Thinking Bubble" />
-
-        {/* Text and Buttons Inside Bubble Chat */}
-        <div className="absolute left-10 top-6 w-32 text-center">
-          {!showNextText && (
-            <>
-              <p className={`anna-text ${isTyping ? "typing-effect" : ""}`}>
-                Hi, Jaja!
-              </p>
-              {!isTyping && (
-                <button onClick={handleNextClick} className="next-button">
-                  Next
-                </button>
-              )}
-            </>
-          )}
-          {showNextText && (
-            <>
-              <p className={`anna-text ${isTyping ? "typing-effect" : ""}`}>
-                Look at this.
-              </p>
-              {!isTyping && (
-                <Link to="/flower" className="next-button">
-                  Next
-                </Link>
-              )}
-            </>
-          )}
+        {/* Bubble Chat */}
+        <div className="relative flex items-center justify-center mb-4">
+          <img src={img2} className="bubble-chat w-40 md:w-48" alt="Thinking Bubble" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center pt-4">
+            {!showNextText && (
+              <>
+                <p className={`anna-text ${isTyping ? "typing-effect" : ""}`}>
+                  Hi, Jaja!
+                </p>
+                {!isTyping && (
+                  <button onClick={handleNextClick} className="next-button">
+                    Next
+                  </button>
+                )}
+              </>
+            )}
+            {showNextText && (
+              <>
+                <p className={`anna-text ${isTyping ? "typing-effect" : ""}`}>
+                  Look at this.
+                </p>
+                {!isTyping && (
+                  <Link to="/flower" className="next-button">
+                    Next
+                  </Link>
+                )}
+              </>
+            )}
+          </div>
         </div>
+
+        {/* Bunny GIF */}
+        <img src={BunnyGif} className="w-48 md:w-60" alt="Bunny" />
+
       </div>
     </div>
   );
