@@ -38,7 +38,7 @@ function Imgboy() {
           {!showNextText && (
             <>
               <p className={`anna-text ${isTyping ? "typing-effect" : ""}`}>
-                Hi, Anna!
+                Hi, Jaja!
               </p>
               {!isTyping && (
                 <button onClick={handleNextClick} className="next-button">
