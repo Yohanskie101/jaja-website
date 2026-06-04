@@ -43,18 +43,24 @@
   width: 220px;
   padding: 16px 28px;
   background-color: #f4a7b9;
-  color: #fff;
+  color: white;
   font-size: 18px;
   font-family: "Playfair Display", cursive;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   text-decoration: none;
 }
 
 .next-pill-button:hover {
   background-color: #e88fa3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(244, 167, 185, 0.5);
+}
+
+.next-pill-button:active {
+  transform: scale(0.97);
 }
 
 /* Ensure the container takes the full viewport height and width */
