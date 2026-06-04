@@ -45,7 +45,7 @@
   background-color: #f4a7b9;
   color: #fff;
   font-size: 18px;
-  font-family: "Great Vibes", cursive;
+  font-family: "Playfair Display", cursive;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -132,32 +132,47 @@
   transform-origin: top;
 }
 
-/* Typing effect animation */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.typing-h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  padding-bottom: 8px;
+  animation: typing-h1 1.5s steps(25, end) forwards;
 }
 
-/* Blinking cursor effect */
+.typing-h1-line2 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  padding-bottom: 8px;
+  animation: typing-h1 1.5s steps(25, end) 1.6s forwards;
+}
+
+.typing-p {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing-p 1.5s steps(30, end) 3.2s forwards;
+}
+
+@keyframes typing-h1 {
+  0% { width: 0; opacity: 1; }
+  100% { width: 100%; opacity: 1; }
+}
+
+@keyframes typing-p {
+  0% { width: 0; opacity: 1; }
+  100% { width: 100%; opacity: 1; }
+}
+
 @keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: black; /* Change color to match your text */
-  }
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
 }
 
-.anna-text.typing-effect {
-  overflow: hidden; /* Hide overflow */
-  white-space: nowrap; /* Keep text in one line */
-  border-right: 2px solid black; /* Cursor effect */
-  animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+@keyframes blink-caret-p {
+  from, to { border-color: transparent; }
+  50% { border-color: #b07070; }
 }
 
 /* PLANTS */

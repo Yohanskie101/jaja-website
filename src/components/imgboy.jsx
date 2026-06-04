@@ -4,36 +4,29 @@ import BunnyGif from "../assets/BunnyCute.gif";
 
 function Imgboy() {
   const [showNextText, setShowNextText] = useState(false);
-  const [isTyping, setIsTyping] = useState(true);
+  const [key, setKey] = useState(0);
 
   const handleNextClick = () => {
     setShowNextText(true);
-    setIsTyping(true);
+    setKey(prev => prev + 1); // restart animation
   };
-
-  useEffect(() => {
-    if (isTyping) {
-      const typingTimeout = setTimeout(() => {
-        setIsTyping(false);
-      }, 2000);
-
-      return () => clearTimeout(typingTimeout);
-    }
-  }, [isTyping]);
 
   return (
     <div className="imgboy-container flex items-center justify-center w-full h-full">
       <div className="flex flex-col items-center justify-center gap-4">
 
-        {/* Title */}
         {!showNextText ? (
           <>
-            <h1 className="anna-text text-5xl">Hi, Jaja!</h1>
-            <p className="sub-text">You make my world brighter </p>
+            <h1 key={`title-${key}`} className="anna-text text-5xl typing-h1">Hi, Jaja!</h1>
+            <p key={`sub-${key}`} className="sub-text typing-p">You make my world brighter</p>
           </>
         ) : (
           <>
-            <h1 className="anna-text text-5xl">Look at this</h1>
+          <div key={`title-${key}`} className="flex flex-col items-center">
+  <h1 className="anna-text text-5xl typing-h1">I'll show you</h1>
+  <h1 className="anna-text text-5xl typing-h1-line2">something!</h1>
+</div>
+            <p key={`sub-${key}`} className="sub-text typing-p">Look at this</p>
           </>
         )}
 
@@ -41,18 +34,14 @@ function Imgboy() {
         <img src={BunnyGif} className="w-48 md:w-60 my-4" alt="Bunny" />
 
         {/* Button */}
-        {!isTyping && (
-          <>
-            {!showNextText ? (
-              <button onClick={handleNextClick} className="next-pill-button">
-                Next <span>→</span>
-              </button>
-            ) : (
-              <Link to="/flower" className="next-pill-button">
-                Next <span>→</span>
-              </Link>
-            )}
-          </>
+        {!showNextText ? (
+          <button onClick={handleNextClick} className="next-pill-button">
+            Next <span>→</span>
+          </button>
+        ) : (
+          <Link to="/flower" className="next-pill-button">
+            Next <span>→</span>
+          </Link>
         )}
 
       </div>
