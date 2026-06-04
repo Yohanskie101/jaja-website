@@ -15,20 +15,24 @@ function Imgboy() {
     <div className="imgboy-container flex items-center justify-center w-full h-full">
       <div className="flex flex-col items-center justify-center gap-4">
 
-        {!showNextText ? (
-          <>
-            <h1 key={`title-${key}`} className="anna-text text-5xl typing-h1">Hi, Jaja!</h1>
-            <p key={`sub-${key}`} className="sub-text typing-p">You make my world brighter</p>
-          </>
-        ) : (
-          <>
-          <div key={`title-${key}`} className="flex flex-col items-center">
-  <h1 className="anna-text text-5xl typing-h1">I'll show you</h1>
-  <h1 className="anna-text text-5xl typing-h1-line2">something!</h1>
-</div>
-            <p key={`sub-${key}`} className="sub-text typing-p">Look at this</p>
-          </>
-        )}
+      {!showNextText ? (
+  <>
+    <div className="text-container">
+      <h1 key={`title-${key}`} className="anna-text text-5xl typing-h1">Hi, Jaja!</h1>
+      <p key={`sub-${key}`} className="sub-text typing-p">You make my world brighter</p>
+    </div>
+  </>
+) : (
+  <>
+    <div className="text-container">
+      <div key={`title-${key}`} className="flex flex-col items-center">
+        <h1 className="anna-text text-5xl typing-h1">I'll show you</h1>
+        <h1 className="anna-text text-5xl typing-h1-line2">something!</h1>
+      </div>
+      <p key={`sub-${key}`} className="sub-text typing-p">Look at this</p>
+    </div>
+  </>
+)}
 
         {/* Bunny GIF */}
         <img src={BunnyGif} className="w-48 md:w-60 my-4" alt="Bunny" />

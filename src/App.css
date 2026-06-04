@@ -81,6 +81,14 @@
   object-fit: cover; /* Ensure the video covers the entire container */
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 160px;
+  justify-content: center;
+}
+
 /* Style the content to appear on top of the video */
 .content {
   position: relative;
