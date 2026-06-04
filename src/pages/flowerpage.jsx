@@ -37,33 +37,31 @@ function FlowerPage() {
         Click Me!
       </button>
       <dialog id="my_modal_3" className="modal">
-        <div className="modal-box">
-          <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </button>
-          </form>
-          <h3>To Jaja:</h3>
-          <p className="py-4">
-            Hello, Jaja. I hope you find this website I created cute. Whenever
-            you feel stressed, mentally exhausted, or even if you just miss me
-            (hehe, assuming), please take a moment to check it. It’s my little
-            way of bringing a smile to your face and reminding you that you’re
-            not alone. I’m so incredibly happy I met you in Inspiro, Anna.
-            You’ve brought so much joy and meaning into my life, and I truly
-            cherish every moment we’ve shared. I really want to keep creating
-            memories with you, supporting you through everything, and being
-            someone you can always count on. You mean so much to me, and I’m
-            grateful for you every single day. Take care of yourself, and
-            remember, I’m always here for you.
-          </p>
-          <p className="py-4">
-            - Your no. 1 fan, <br />
-            Yohan
-          </p>
-        </div>
-      </dialog>
+  <div className="modal-box">
+    <form method="dialog">
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <div className="modal-content">
+      <p>Hi Jaja,</p>
+      <br/>
+      <p>I hope you find this simple website okay for you. I just wanted to say — you are the most prettiest person. 😊</p>
+      <br/>
+      <p>I like how you smile. I love everything about you — and especially, I like how I always tease you. You're so cute and pretty.</p>
+      <br/>
+      <p>Just so you know, I'm so proud and happy for you as you are doing your very best always on your own. Don't pressure yourself, and enjoy mo lang lagi ang time mo.</p>
+      <br/>
+      <p>I'm always here for you and will be there for you always. Muah 💋</p>
+      <br/>
+      <p>Palagi mo tatandaan — nandito lang ako palagi para sa'yo. Hindi ka nag-iisa. 🤍</p>
+      <br/>
+      <p>I'm always grateful na nakilala kita, and I will never regret everything I do for you and what we always do.</p>
+      <br/>
+      <p>Hope you find what you always dream for, Jaja. I will always support you sa anumang gusto mo.</p>
+      <br/>
+      <p>- Yohan</p>
+    </div>
+  </div>
+</dialog>
 
       <div className="flowers">
         <div className="flower flower--1">

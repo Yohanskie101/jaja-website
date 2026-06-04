@@ -156,6 +156,13 @@
   animation: typing-h1 1.5s steps(25, end) 1.6s forwards;
 }
 
+.typing-p-first {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing-p 1.5s steps(30, end) 1.6s forwards;
+}
+
 .typing-p {
   overflow: hidden;
   white-space: nowrap;
@@ -251,6 +258,21 @@ body.flower-page-active {
 .flowers {
   position: relative;
   transform: scale(0.7);
+}
+.modal-box {
+  padding: 24px 28px !important;
+  border-radius: 16px !important;
+  max-height: 80vh;
+  overflow-y: auto;
+  line-height: 1.7;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: white !important;
+}
+
+.modal-box p {
+  padding: 0 !important;
+  margin-bottom: 4px;
 }
 
 .flower {

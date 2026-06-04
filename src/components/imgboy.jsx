@@ -15,11 +15,11 @@ function Imgboy() {
     <div className="imgboy-container flex items-center justify-center w-full h-full">
       <div className="flex flex-col items-center justify-center gap-4">
 
-      {!showNextText ? (
+    {!showNextText ? (
   <>
     <div className="text-container">
       <h1 key={`title-${key}`} className="anna-text text-5xl typing-h1">Hi, Jaja!</h1>
-      <p key={`sub-${key}`} className="sub-text typing-p">You make my world brighter</p>
+      <p key={`sub-${key}`} className="sub-text typing-p-first">You make my world brighter</p>
     </div>
   </>
 ) : (
