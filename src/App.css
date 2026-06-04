@@ -274,6 +274,7 @@ body.flower-page-active {
   font-family: "Playfair Display", serif;
   font-size: 15px;
   color: white !important;
+  background-color: #1a1a2e !important;
 }
 
 .modal-box p {
